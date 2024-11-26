@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tan-dara5304-react-vite-service
+spec:
+  type: NodePort
+  selector:
+    app: tan-dara5304-react-vite
+  ports:
+    - protocol: TCP
+      port: 8241
+      targetPort: 5173
