@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tan-dara5304-react-vite-certificate
+  namespace: tan-dara5304-react-vite
+spec:
+  secretName: tan-dara5304-react-vite-secret-tls
+  commonName: tan-dara5304-react-vite.assessify.org
+  dnsNames:
+  - tan-dara5304-react-vite.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
