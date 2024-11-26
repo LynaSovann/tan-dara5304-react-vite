@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tan-dara5304-react-vite-deployment
+  labels:
+    app: tan-dara5304-react-vite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tan-dara5304-react-vite
+  template:
+    metadata:
+      labels:
+        app: tan-dara5304-react-vite
+    spec:
+      containers:
+        - name: tan-dara5304-react-vite-container
+          image: pipejet/tan-dara5304-react-vite:latest
+          ports:
+            - containerPort: 5173
